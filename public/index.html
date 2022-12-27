@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="POC_styles.css">
+    <title>UI POC</title>
+    <script src="https://kit.fontawesome.com/84c7f42d8e.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="flex-row mainHead">
+        <div id="hamburger-menu" class="hamburger-menu" onclick="showNavBar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h2 class="upshift">Upshift</h2>
+        <div class="flex-row headerLinks">
+            <a href="#" class="anchor-moresmall">Products</a>
+            <a href="#" class="anchor-moresmall">Technology</a>
+        </div>
+        <div class="flex-row icons">
+            <img class="rightGap" src="Group 2.png" alt="Cart" width="15" height="13" />
+            <img src="user.png" alt="User" width="15" height="14" />
+        </div>
+        <div id="arrow" class="userArrow" onclick="changeArrow()">
+            <i id="downArrow" class="fas fa-chevron-down" style="display: initial;"></i>
+            <i id="upArrow" class="fas fa-angle-up" style="display: none;"></i>
+        </div>
+        <i id="absoluteArrow" class="fas fa-sort-up upSide absoluteArrow" style="display: none;"></i>
+    </header>
+    <div id="userSettings" class="flex-column userSettings" style="display: none;">
+        <div>Settings</div>
+        <div>Logout</div>
+    </div>
+
+
+    <section class="flex-row bodyContent">
+        <section id="sidenav" class="sidenav">
+            <div class="flex-column sideIcons">
+                <i class="fas fa-user"></i>
+                <i class="fas fa-user-friends"></i>
+                <i class="far fa-credit-card"></i>
+                <i class="fas fa-lock"></i>
+            </div>
+        </section>
+        <section id="biggerNav" class="biggerNav">
+            <section class="sec">
+                <p class="bold bigText">Account</p>
+                <div class="flex-row"><i class="fas fa-user"></i>
+                    <p class="profileMargin">Profile</p>
+                </div>
+                <div class="flex-row"><i class="fas fa-user-friends"></i>
+                    <p>My Family</p>
+                </div>
+            </section>
+            <br/>
+            <hr class="memberLine" />
+            <section class="sec">
+                <p class="bold bigText">Payment</p>
+                <div class="flex-row"><i class="far fa-credit-card"></i>
+                    <p>Payment Options</p>
+                </div>
+            </section>
+            <br/>
+            <hr class="memberLine" />
+            <section class="sec">
+                <p class="bold bigText">Security</p>
+                <div class="flex-row"><i class="fas fa-lock"></i>
+                    <p>Login & Security</p>
+                </div>
+            </section>
+        </section>
+        <section id="content" class="content flex-column">
+            <div class="profile">
+                <div class="flex-row">
+                    <p class="bigText">Manage Profile</p>
+                    <img src="back.png" class="greaterThan" alt=">" height="7" />
+                    <p class="smallText"> My Family</p>
+                </div>
+            </div>
+
+            <section class="familySection">
+                <div class="familySec-Div1 flex-row">
+                    <p class="myFamily-Bold">My Family</p>
+                </div>
+                <div class="familySec-Div2">
+                    <div class="flex-row wrap">
+                        <div class="member">
+                            <div class="member-div1 flex-row">
+                                <img src="profile picture.png" alt="Pic1" width="75" height="75" />
+                            </div>
+                            <hr class="memberLine" />
+                            <div class="member-div2">
+                                <p class="userDetails bold">Nat Joseph</p>
+                                <p class="userDetails sizeSmall">natjoseph@gmail.com</p>
+                                <p class="userDetails bold leftGap">Admin</p>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="member-div1 flex-row">
+                                <img src="profile picture1.png" alt="Pic2" width="75" height="75" />
+                            </div>
+                            <hr class="memberLine" />
+                            <div class="member-div2">
+                                <p class="userDetails bold">Joe Joseph</p>
+                                <p class="userDetails bold sizeSmall">Joejoseph@gmail.com</p>
+                                <p class="userDetails bold leftGap">Active User</p>
+                            </div>
+                            <div class="member-div3 flex-row">
+                                <input type="radio" id="coAdmin1" class="userDetails" />
+                                <label for="coAdmin1" class="userDetails labelClass sizeSmaller">Co Admin</label>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="member-div1 flex-row">
+                                <img src="profile picture2.png" alt="Pic3" width="75" height="75" />
+                            </div>
+                            <hr class="memberLine" />
+                            <div class="member-div2">
+                                <p class="userDetails bold">Ben Joseph</p>
+                                <p class="userDetails bold sizeSmall">Joejoseph@gmail.com</p>
+                                <p class="userDetails bold leftGap">Active User</p>
+                            </div>
+                            <div class="member-div3 flex-row">
+                                <input type="radio" id="coAdmin1" class="userDetails" />
+                                <label for="coAdmin1" class="userDetails labelClass sizeSmaller">Co Admin</label>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <div class="member-div1 flex-row defaultUser">
+                                <img src="defaultUser.jpg" id="defaultUser" alt="Pic2" width="97" height="97" />
+                            </div>
+                            <div class="flex-row add-New-Member">
+                                <button class="addButton">ADD MEMBER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="familySec-Div3 flex-row">
+                    <p class="paraText">Note: You can add up to 4 family members with Welivii Premium Membership. Also, add members <b>beyond the limit of 4</b> for an additional price of <b>$2.99/month/person or $25/yr/person</b>
+                    </p>
+                </div>
+            </section>
+
+            <section class="familyTable">
+                <div class="tableDiv overflowX">
+                    <table class="tableStyle bold">
+                        <colgroup>
+                            <col style="width: 130px;">
+                            <col style="width: 150px;">
+                            <col style="width: 150px;">
+                            <col style="width: 100px;">
+                            <col style="width: 120px;">
+                            <col style="width: 460px;">
+                        </colgroup>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Relationship</th>
+                            <th>Sign up data</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Nat Joseph</td>
+                            <td>NatJoseph@gmail.com</td>
+                            <td>777-777-777</td>
+                            <td>Self</td>
+                            <td>April 1, 2020</td>
+                            <td>Active
+                                <label class="switch moreLeft">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Joe Joseph</td>
+                            <td>JoeJoseph@gmail.com</td>
+                            <td>777-777-777</td>
+                            <td>Husband</td>
+                            <td>April 1, 2020</td>
+                            <td>Active
+                                <label class="switch moreLeft">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ben Joseph</td>
+                            <td>BenJoseph@gmail.com</td>
+                            <td>777-777-777</td>
+                            <td>Father</td>
+                            <td>January 12, 2020</td>
+                            <td>Inactive
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ben Joseph</td>
+                            <td>BenJoseph@gmail.com</td>
+                            <td>777-777-777</td>
+                            <td>Father</td>
+                            <td>January 12, 2020</td>
+                            <td>Inactive
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="pagenation">
+                    <button class="pages"><img src="multimedia-option.png" alt="<" height="7" class="arrowPage"/></button>
+                    <button class="pages blueColor">1</button>
+                    <button class="pages">2</button>
+                    <button class="pages"><div class="dots">..</div></button>
+                    <button class="pages"><img src="multimedia-option-1.png" alt="<" height="7"class="arrowPage"/></button>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+    <footer class="mainFooter">
+        <div class="flex-row foot-div1 leftSpace">
+            <h2 class="upshift">Upshift</h2>
+        </div>
+        <div class="foot-div2 leftSpace flex-row anchor-small wrap">
+            <div class="footLinks">
+                <p class="footHead">SHOP</p>
+                <div>
+                    <a href="#" class="anchor-small">Products</a>
+                    <a href="#" class="anchor-small">Subscriptions</a>
+                </div>
+            </div>
+            <div class="footLinks">
+                <p class="footHead">ABOUT US</p>
+                <div>
+                    <a href="#" class="anchor-small">Leadership</a>
+                    <a href="#" class="anchor-small">Board of Advisors</a>
+                </div>
+            </div>
+            <div class="footLinks">
+                <p class="footHead">LEGAL</p>
+                <div>
+                    <a href="#" class="anchor-small">Terms and conditions</a>
+                    <a href="#" class="anchor-small">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footLinks">
+                <p class="footHead">GET IN TOUCH</p>
+                <div>
+                    <a href="#" class="anchor-small">Contact Us</a>
+                    <a href="#" class="anchor-small">Help</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="svgLine leftSpace">
+            <svg height="1" width="1150">
+                <line x1="0" y1="1" x2="1150" y2="1" style="stroke:#8b91a7;stroke-width:2" />
+              </svg>
+        </div>
+
+
+        <div class="foot-div3 flex-row leftSpace">
+            <div>
+                <p class="copyright anchor-small">© 2020 Upshift USA</p>
+            </div>
+            <div class="rightSpace">
+                <img class="footImg" src="facebook-logo.png" alt="Facebook" width="25" height="25" />
+                <img class="footImg" src="instagram.png" alt="Instagram" width="25" height="25" />
+                <img class="footImg" src="youtube.png" alt="Youtube" width="25" height="25" />
+                <img class="footImg" src="facebook-logo.png" alt="Facebook" width="25" height="25" />
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="POC_script.js"></script>
+</body>
+
+</html>
